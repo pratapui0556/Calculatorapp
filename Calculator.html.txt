@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title></title>
+	<style>
+	#calculations{
+background-color:#0080FF;
+width:250px;
+position:relative;
+border:2px solid #000000;
+border-radius:4px;
+margin:100px 100px 100px 500px;
+	 }
+	 input[type="button"]{
+	 border:2px solid;
+	 margin:10px;
+	 padding:10px;
+	 border-radius:4px;
+	 
+	  }
+	  input[type="text"]{
+	  width:245px;
+	  font-size:20px;
+	  padding:1px solid #000000;
+	  background-color:#400040;
+	  color:#FFFFFF;
+	  
+	   }
+ 
+	
+	</style>
+    
+   
+  </head>
+  <body>
+  <script>
+function backSpace(){
+var value = calculator.answer.value;
+calculator.answer.value = value.substr(0,value.length-1);
+}
+</script>
+ 
+  
+  <div id="calculations" align="center">
+  <form id="calculator">
+  <input type="text" name="answer" />
+  <br />
+  	  	 <input type="button" value="1" onclick="calculator.answer.value += '1'" />
+		 <input type="button" value="2" onclick="calculator.answer.value += '2'" />
+  		 <input type="button" value="3" onclick="calculator.answer.value += '3'" />
+  		 <input type="button" value="AC" onclick="calculator.answer.value = ''" />
+		 <br />
+		 <input type="button" value="4" onclick="calculator.answer.value += '4'" />
+		 <input type="button" value="5" onclick="calculator.answer.value += '5'" />
+		 <input type="button" value="6" onclick="calculator.answer.value += '6'" />
+		 <input type="button" value="-" onclick="calculator.answer.value += '-'" />
+		 <br />
+		 <input type="button" value="7" onclick="calculator.answer.value += '7'" />
+		 <input type="button" value="8" onclick="calculator.answer.value += '8'" />
+		 <input type="button" value="9" onclick="calculator.answer.value += '9'" />
+		 <input type="button" value="*" onclick="calculator.answer.value += '*'" />
+		 <br />
+		  <input type="button" value="+" onclick="calculator.answer.value +='+'" />
+		 <input type="button" value="0" onclick="calculator.answer.value += '0'" />
+		 <input type="button" value="/" onclick="calculator.answer.value += '/'" />
+		 <input type="button" value="=" onclick="calculator.answer.value =eval(calculator.answer.value)" /> 
+		 <br />
+		 <input type="button" value="." onclick="calculator.answer.value += '.'" />
+		 <input type="button" value="c" onclick="backSpace()"></input>
+		 
+  </form>
+   </div> 
+   </body>
+</html>
